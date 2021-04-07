@@ -4,21 +4,39 @@
     <title>Film Card</title>
     <style>
        body {
-  background-color: goldenrod;
+  background-color: #000;
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */
     </style>
   </head>
   <body>
     <header> 
-      <div class="header"> 
-        <h1>Шапка сайта </h1>
+      <div class="header"> <a href="#"><img src="images/logo.svg" alt="Logo"></a>
+        <nav>
+          <ul class="nav"> 
+            <li class="nav-item active"><a class="nav-item" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-item" href="#">TV shows</a></li>
+            <li class="nav-item"><a class="nav-item" href="#">Movies</a></li>
+            <li class="nav-item"><a class="nav-item" href="#">Series</a></li>
+          </ul>
+          <ul class="control"> 
+            <li class="control-item"> 
+              <button class="control-btn control-btn_search"></button>
+            </li>
+            <li class="control-item"> 
+              <button class="control-btn control-btn_notice"></button>
+            </li>
+            <li class="control-item"> 
+              <button class="control-btn control-btn_friend"></button>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
-    <h1>Pug - node template engine</h1>
     <footer> 
       <div class="footer"> 
-        <h1>Подвал сайта</h1>
+        <h1>Подвал</h1>
       </div>
     </footer>
   </body>
