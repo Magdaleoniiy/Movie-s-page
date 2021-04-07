@@ -68,25 +68,44 @@ body {
     align-items: center;
     padding-left: 0px;
     list-style: none;
+    &-item {
+        position: relative;
+    }
     &-btn{
+        display: block;
         background-color: transparent;
         background: no-repeat;
-        border: none;
+        border: none;   
         &_search{       
             background-image: url("images/search.svg");
             width: 1.8rem;
-            height: 1.8rem;
-            
+            height: 1.8rem;     
         }
         &_notice{
             background-image: url("images/notice.svg");
             width: 2rem;
-            height: 2.3rem;
+            height: 2.261rem;
+            
+            //Decorate ellement under "din-don"-s object
+            
+            &::before {
+                display: flex;
+                justify-content: flex-end;
+                content: '';
+                width: 7px;
+                height: 7px;
+                border-radius: 50%;
+                background: linear-gradient(180deg, #326CFF 0%, #26FFF2 100%);
+                position: absolute;
+                right: -0.13rem;
+                top: -0.055rem;
+            }
+            
         }
         &_friend{
             background-image: url("images/friend.svg");
             width: 1.8rem;
-            height: 1.927rem;
+            height: 1.92rem;
         }
 
         background-size: cover;

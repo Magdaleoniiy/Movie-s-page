@@ -87,7 +87,12 @@ body {
   list-style: none;
 }
 
+.control-item {
+  position: relative;
+}
+
 .control-btn {
+  display: block;
   background-color: transparent;
   background: no-repeat;
   border: none;
@@ -103,12 +108,30 @@ body {
 .control-btn_notice {
   background-image: url("images/notice.svg");
   width: 2rem;
-  height: 2.3rem;
+  height: 2.261rem;
+}
+
+.control-btn_notice::before {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#326CFF), to(#26FFF2));
+  background: linear-gradient(180deg, #326CFF 0%, #26FFF2 100%);
+  position: absolute;
+  right: -0.13rem;
+  top: -0.055rem;
 }
 
 .control-btn_friend {
   background-image: url("images/friend.svg");
   width: 1.8rem;
-  height: 1.927rem;
+  height: 1.92rem;
 }
 /*# sourceMappingURL=style.css.map */
