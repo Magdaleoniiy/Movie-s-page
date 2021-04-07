@@ -1,4 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Mulish:wght@400;700;800&display=swap');
+
+$white: #fff;
+html {
+    font-size: 10px;
+}
+
 body {
+    font-size: 16px;
     background-color: #000;
     color: #fff;
+    //font-family: 'Marcellus', serif;//
+    font-family: 'Mulish', sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 143.5rem;
+    padding: 1.5rem;
+    margin: 0 auto;   
+}
+
+/* .logo {
+    height: 7rem;
+    width: 15.7rem;
+
+} */
+
+.nav {
+    width: 38.5rem;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding-left: 0;     
+    align-items: center;
+    &-link{
+        text-decoration: none;
+        color: rgba($white, 0.5);
+        font-weight: 700;
+        &::after {
+            opacity: 0;
+            content: '';
+            display: block;
+            background-color: white;
+            width: 100%;
+            height: .2rem;
+            background: linear-gradient(316.53deg, #26FFF2 13.2%, #326CFF 71.54%);
+            border-radius: .5rem;
+            margin-top: .5rem;
+        }
+        &.active{
+            color: rgba($white, 1.0);
+            font-weight: 700;
+            &::after{
+                opacity: 1;
+            }
+                     
+        }
+    }
+}
+
+.control {
+    width: 20.78rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0px;
+    list-style: none;
+    &-btn{
+        background-color: transparent;
+        background: no-repeat;
+        border: none;
+        &_search{       
+            background-image: url("images/search.svg");
+            width: 1.8rem;
+            height: 1.8rem;
+            
+        }
+        &_notice{
+            background-image: url("images/notice.svg");
+            width: 2rem;
+            height: 2.3rem;
+        }
+        &_friend{
+            background-image: url("images/friend.svg");
+            width: 1.8rem;
+            height: 1.927rem;
+        }
+
+        background-size: cover;
+    }
 }
