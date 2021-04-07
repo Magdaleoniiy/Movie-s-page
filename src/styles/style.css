@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Marcellus&family=Mulish:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Mulish:wght@400;700;800&display=swap");
 html {
   font-size: 10px;
 }
@@ -8,6 +8,18 @@ body {
   background-color: #000;
   color: #fff;
   font-family: 'Mulish', sans-serif;
+}
+
+button {
+  display: block;
+  background-color: transparent;
+  background: no-repeat;
+  border: none;
+}
+
+.wrapper {
+  margin-left: 8.4rem;
+  margin-right: 8.4rem;
 }
 
 .header {
@@ -21,7 +33,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   max-width: 143.5rem;
-  padding: 1.5rem;
+  padding: 1.5rem 0;
   margin: 0 auto;
 }
 
@@ -92,10 +104,6 @@ body {
 }
 
 .control-btn {
-  display: block;
-  background-color: transparent;
-  background: no-repeat;
-  border: none;
   background-size: cover;
 }
 
@@ -133,5 +141,63 @@ body {
   background-image: url("images/friend.svg");
   width: 1.8rem;
   height: 1.92rem;
+}
+
+.banner {
+  margin: 0 auto;
+}
+
+.banner-description {
+  float: left;
+  width: calc(40% - 2.9rem);
+  padding-right: 2.9rem;
+}
+
+.banner-description__title {
+  font-family: 'Marcellus', serif;
+  font-size: 8rem;
+  line-height: 7.5rem;
+  font-weight: 400;
+}
+
+.banner-description-panel {
+  font-weight: 700;
+}
+
+.banner-description-panel__year {
+  padding-right: 0.908rem;
+}
+
+.banner-description-panel__age {
+  padding-left: 0.908rem;
+  padding-right: 0.908rem;
+  border: 2px solid #fff;
+  /* border-image: $gradient;
+                -moz-border-image: -moz-$gradient;
+                -webkit-border-image: -webkit-$gradient;
+                border-image-slice: 1; */
+}
+
+.banner-description-panel__len {
+  padding-left: 0.908rem;
+  padding-right: 6rem;
+}
+
+.banner-description-panel__rate img {
+  padding-left: 1.25rem;
+}
+
+.banner-photo {
+  float: right;
+  width: 60%;
+  height: 76.4rem;
+  background-image: url("images/film.png");
+}
+
+@font-face {
+  font-family: "Marcellus";
+  src: url("fonts/Marcellus-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
 }
 /*# sourceMappingURL=style.css.map */

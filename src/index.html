@@ -351,7 +351,7 @@
   
   [hidden] {
     display: none;
-  }@import url("https://fonts.googleapis.com/css2?family=Marcellus&family=Mulish:wght@400;700;800&display=swap");
+  }@import url("https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Mulish:wght@400;700;800&display=swap");
 html {
   font-size: 10px;
 }
@@ -361,6 +361,18 @@ body {
   background-color: #000;
   color: #fff;
   font-family: 'Mulish', sans-serif;
+}
+
+button {
+  display: block;
+  background-color: transparent;
+  background: no-repeat;
+  border: none;
+}
+
+.wrapper {
+  margin-left: 8.4rem;
+  margin-right: 8.4rem;
 }
 
 .header {
@@ -374,7 +386,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   max-width: 143.5rem;
-  padding: 1.5rem;
+  padding: 1.5rem 0;
   margin: 0 auto;
 }
 
@@ -445,10 +457,6 @@ body {
 }
 
 .control-btn {
-  display: block;
-  background-color: transparent;
-  background: no-repeat;
-  border: none;
   background-size: cover;
 }
 
@@ -487,37 +495,109 @@ body {
   width: 1.8rem;
   height: 1.92rem;
 }
+
+.banner {
+  margin: 0 auto;
+}
+
+.banner-description {
+  float: left;
+  width: calc(40% - 2.9rem);
+  padding-right: 2.9rem;
+}
+
+.banner-description__title {
+  font-family: 'Marcellus', serif;
+  font-size: 8rem;
+  line-height: 7.5rem;
+  font-weight: 400;
+}
+
+.banner-description-panel {
+  font-weight: 700;
+}
+
+.banner-description-panel__year {
+  padding-right: 0.908rem;
+}
+
+.banner-description-panel__age {
+  padding-left: 0.908rem;
+  padding-right: 0.908rem;
+  border: 2px solid #fff;
+  /* border-image: $gradient;
+                -moz-border-image: -moz-$gradient;
+                -webkit-border-image: -webkit-$gradient;
+                border-image-slice: 1; */
+}
+
+.banner-description-panel__len {
+  padding-left: 0.908rem;
+  padding-right: 6rem;
+}
+
+.banner-description-panel__rate img {
+  padding-left: 1.25rem;
+}
+
+.banner-photo {
+  float: right;
+  width: 60%;
+  height: 76.4rem;
+  background-image: url("images/film.png");
+}
+
+@font-face {
+  font-family: "Marcellus";
+  src: url("fonts/Marcellus-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
 /*# sourceMappingURL=style.css.map */
     </style>
   </head>
   <body>
-    <header> 
-      <div class="header"> <a class="logo" href="#"><img src="images/logo.svg" alt="logo"></a>
-        <nav>
-          <ul class="nav"> 
-            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">TV shows</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Movies</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Series</a></li>
+    <div class="wrapper">
+      <header> 
+        <div class="header"> <a class="logo" href="#"><img src="images/logo.svg" alt="logo"></a>
+          <nav>
+            <ul class="nav"> 
+              <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">TV shows</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Movies</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Series</a></li>
+            </ul>
+          </nav>
+          <ul class="control"> 
+            <li class="control-item"> 
+              <button class="control-btn control-btn_search"></button>
+            </li>
+            <li class="control-item"> 
+              <button class="control-btn control-btn_notice"></button>
+            </li>
+            <li class="control-item"> 
+              <button class="control-btn control-btn_friend"></button>
+            </li>
           </ul>
-        </nav>
-        <ul class="control"> 
-          <li class="control-item"> 
-            <button class="control-btn control-btn_search"></button>
-          </li>
-          <li class="control-item"> 
-            <button class="control-btn control-btn_notice"></button>
-          </li>
-          <li class="control-item"> 
-            <button class="control-btn control-btn_friend"></button>
-          </li>
-        </ul>
-      </div>
-    </header>
-    <footer> 
-      <div class="footer"> 
-        <h1>Подвал сайта</h1>
-      </div>
-    </footer>
+        </div>
+      </header>
+      <section> 
+        <div class="container"> 
+          <div class="banner"> 
+            <div class="banner-description"> 
+              <h1 class="banner-description__title">Zack Snyder's Justice League</h1>
+              <div class="banner-description-panel"><span class="banner-description-panel__year">2021</span><span class="banner-description-panel__age">18+</span><span class="banner-description-panel__len">4h 2min</span><span class="banner-description-panel__rate">8.8<img src="images/rating.svg" alt=""></span></div>
+              <p>Determined to ensure Superman's ultimate sacrifice was not in vain, Bruce Wayne aligns forces with Diana Prince with plans to recruit a team of metahumans to protect the world from an approaching threat of catastrophic proportions.</p>
+              <button class="main-btn">Watch</button>
+              <button class="main-btn main-btn-white">More information</button>
+            </div>
+            <div class="banner-photo"></div>
+          </div>
+        </div>
+      </section>
+      <footer> 
+        <div class="footer"> </div>
+      </footer>
+    </div>
   </body>
 </html>

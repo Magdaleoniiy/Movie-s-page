@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Mulish:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Mulish:wght@400;700;800&display=swap');
 
 $white: #fff;
+$gradient: linear-gradient(180deg, #326CFF 0%, #26FFF2 100%);
 html {
     font-size: 10px;
 }
@@ -9,8 +10,20 @@ body {
     font-size: 16px;
     background-color: #000;
     color: #fff;
-    //font-family: 'Marcellus', serif;//
+    //font-family: 'Marcellus SC', serif;//
     font-family: 'Mulish', sans-serif;
+}
+
+button {
+    display: block;
+    background-color: transparent;
+    background: no-repeat;
+    border: none;
+}
+
+.wrapper {
+    margin-left: 8.4rem;
+    margin-right: 8.4rem;
 }
 
 .header {
@@ -18,7 +31,7 @@ body {
     justify-content: space-between;
     align-items: center;
     max-width: 143.5rem;
-    padding: 1.5rem;
+    padding: 1.5rem 0;
     margin: 0 auto;   
 }
 
@@ -71,11 +84,7 @@ body {
     &-item {
         position: relative;
     }
-    &-btn{
-        display: block;
-        background-color: transparent;
-        background: no-repeat;
-        border: none;   
+    &-btn{   
         &_search{       
             background-image: url("images/search.svg");
             width: 1.8rem;
@@ -95,7 +104,7 @@ body {
                 width: 7px;
                 height: 7px;
                 border-radius: 50%;
-                background: linear-gradient(180deg, #326CFF 0%, #26FFF2 100%);
+                background: $gradient;
                 position: absolute;
                 right: -0.13rem;
                 top: -0.055rem;
@@ -111,3 +120,63 @@ body {
         background-size: cover;
     }
 }
+
+.banner {
+    margin: 0 auto;
+    &-description {
+        float: left;
+        width: calc(40% - 2.9rem);
+        padding-right: 2.9rem;
+        &__title {
+            font-family: 'Marcellus', serif;
+            font-size: 8rem;
+            line-height: 7.5rem;
+            font-weight: 400;
+        }
+        &-panel{
+            font-weight: 700;
+            
+            &__year{
+                padding-right: 0.908rem;
+            }
+            &__age{
+                padding-left: 0.908rem;
+                padding-right: 0.908rem;
+                border: 2px solid #fff; 
+
+                //
+                //  Открытый вопрос: как закруглить border
+                //  с подключенным к нему градиентом?
+                //
+
+                /* border-image: $gradient;
+                -moz-border-image: -moz-$gradient;
+                -webkit-border-image: -webkit-$gradient;
+                border-image-slice: 1; */
+            }
+            &__len{
+                padding-left: 0.908rem;
+                padding-right: 6rem;
+            }
+            &__rate{
+                img {
+                    padding-left: 1.25rem;
+                }
+            }
+        }
+    }
+    &-photo {
+        float: right;
+        width: 60%;
+        height: 76.4rem;
+        background-image: url("images/film.png");
+    }
+}
+
+@font-face {
+    font-family: "Marcellus"; 
+    // адрес шрифта и тип 
+    src: url("fonts/Marcellus-Regular.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: 400; 
+    } 
