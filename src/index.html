@@ -518,25 +518,45 @@ button {
 }
 
 .banner-description-panel__year {
-  padding-right: 0.908rem;
+  padding-right: 1.816rem;
 }
 
 .banner-description-panel__age {
-  padding-left: 0.908rem;
-  padding-right: 0.908rem;
-  border: 2px solid #fff;
+  width: 5.975rem;
+  position: relative;
+  display: inline-block;
+  text-align: center;
   /* border-image: $gradient;
                 -moz-border-image: -moz-$gradient;
                 -webkit-border-image: -webkit-$gradient;
                 border-image-slice: 1; */
 }
 
+.banner-description-panel__age::before {
+  display: block;
+  position: absolute;
+  top: calc(50% - 1.2rem);
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2.4rem;
+  background-image: url(images/bluerame.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .banner-description-panel__len {
-  padding-left: 0.908rem;
+  padding-left: 1.825rem;
   padding-right: 6rem;
 }
 
+.banner-description-panel__rate {
+  display: inline-block;
+  position: relative;
+}
+
 .banner-description-panel__rate img {
+  position: absolute;
   padding-left: 1.25rem;
 }
 
