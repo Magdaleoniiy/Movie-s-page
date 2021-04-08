@@ -352,6 +352,11 @@
   [hidden] {
     display: none;
   }@import url("https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Mulish:wght@400;700;800&display=swap");
+* {
+  margin: none;
+  padding: none;
+}
+
 html {
   font-size: 10px;
 }
@@ -364,10 +369,10 @@ body {
 }
 
 button {
-  display: block;
   background-color: transparent;
   background: no-repeat;
   border: none;
+  padding: none;
 }
 
 .wrapper {
@@ -496,13 +501,13 @@ button {
   height: 1.92rem;
 }
 
-.banner {
-  margin: 0 auto;
+.section-banner {
+  height: 100%;
+  border-bottom: 1px solid #2F2E2E;
 }
 
 .banner-description {
-  float: left;
-  width: calc(40% - 2.9rem);
+  max-width: 56.2rem;
   padding-right: 2.9rem;
 }
 
@@ -527,9 +532,9 @@ button {
   display: inline-block;
   text-align: center;
   /* border-image: $gradient;
-                -moz-border-image: -moz-$gradient;
-                -webkit-border-image: -webkit-$gradient;
-                border-image-slice: 1; */
+            -moz-border-image: -moz-$gradient;
+            -webkit-border-image: -webkit-$gradient;
+            border-image-slice: 1; */
 }
 
 .banner-description-panel__age::before {
@@ -562,49 +567,49 @@ button {
 
 .banner-description__text {
   display: block;
-  margin-bottom: 3.5rem;
   padding-right: 5.2rem;
   color: #C2C2C2;
   line-height: 2.8rem;
   font-size: 1.8rem;
 }
 
-.banner-photo {
-  float: right;
-  width: 60%;
-  height: 76.4rem;
-  background-image: url("images/film.png");
+.banner-description-control {
+  margin-top: 3.5rem;
 }
 
-.main-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0;
-  font-family: 'Mulish', sans-serif;
-  font-weight: 800;
-  color: #fff;
-  width: 14.1rem;
-  height: 5rem;
-  background-image: linear-gradient(316.53deg, #26FFF2 13.2%, #326CFF 71.54%);
+.banner-description-control__btn {
+  font-size: 1.6rem;
+  padding: 15px 30px;
+  border: none;
   border-radius: 10rem;
-  text-align: center;
+  background-image: linear-gradient(316.53deg, #26FFF2 13.2%, #326CFF 71.54%);
+  color: #fff;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 600;
 }
 
-.main-btn::before {
-  margin-right: 1.5rem;
+.banner-description-control__btn-main {
+  margin-right: 3rem;
+  position: relative;
+  padding-left: 6rem;
+}
+
+.banner-description-control__btn-main::before {
+  position: absolute;
+  display: inline-block;
   content: '';
   width: 1.4rem;
   height: 1.8rem;
   background-image: url(images/watch_arrow.svg);
-  background-repeat: no-repeat;
+  background-repeat: none;
   background-size: cover;
+  left: 3rem;
+}
+
+.banner-description-control__btn-more {
+  background-image: none;
+  background-color: #fff;
+  color: #323232;
 }
 
 @font-face {
@@ -641,22 +646,24 @@ button {
           </ul>
         </div>
       </header>
-      <section> 
-        <div class="container"> 
-          <div class="banner"> 
-            <div class="banner-description"> 
-              <h1 class="banner-description__title">Zack Snyder's Justice League</h1>
-              <div class="banner-description-panel"><span class="banner-description-panel__year">2021</span><span class="banner-description-panel__age">18+</span><span class="banner-description-panel__len">4h 2min</span><span class="banner-description-panel__rate">8.8<img src="images/rating.svg" alt=""></span></div>
-              <p class="banner-description__text">Determined to ensure Superman's ultimate sacrifice was not in vain, Bruce Wayne aligns forces with Diana Prince with plans to recruit a team of metahumans to protect the world from an approaching threat of catastrophic proportions.</p>
-              <button class="main-btn">Watch</button>
-              <button class="main-btn main-btn-white">More information</button>
+      <section class="section-banner">
+        <div class="container">
+          <div class="banner-description"> 
+            <h1 class="banner-description__title">Zack Snyder's Justice League</h1>
+            <div class="banner-description-panel"><span class="banner-description-panel__year">2021</span><span class="banner-description-panel__age">18+</span><span class="banner-description-panel__len">4h 2min</span><span class="banner-description-panel__rate">8.8<img src="images/rating.svg" alt=""></span></div>
+            <p class="banner-description__text">Determined to ensure Superman's ultimate sacrifice was not in vain, Bruce Wayne aligns forces with Diana Prince with plans to recruit a team of metahumans to protect the world from an approaching threat of catastrophic proportions.</p>
+            <div class="banner-description-control">
+              <button class="banner-description-control__btn banner-description-control__btn-main"> Watch</button>
+              <button class="banner-description-control__btn banner-description-control__btn-more">More information</button>
             </div>
-            <div class="banner-photo"></div>
           </div>
+          <div class="banner-photo"></div>
         </div>
       </section>
       <footer> 
-        <div class="footer"> </div>
+        <div class="footer"> 
+          <h1>Подвал</h1>
+        </div>
       </footer>
     </div>
   </body>
